@@ -1,0 +1,20 @@
+How to create our own neural net, with the help of : https://medium.com/datadriveninvestor/math-neural-network-from-scratch-in-python-d6da9f29ce65
+
+### General design
+- to make the neural net robust to structure, initialize each layer independently
+- this means that we make a layer class, which can do two main things
+    - it can take an input, and generate an output (feedforwrad)
+    - it can recieve the derivative of the error with respect to it's output, and calculate the deriviative of the error with respect to its input (back propagation)
+- activation layers and connection layers are seperated
+    - this means that layers kind of exist in pairs - conneciton, activation
+    - and either one can be left out if need be
+    - and the activation function can be different for each layer
+    - as such, define these two one after another, ex:
+        - FCLayer()
+        - ActivationLayer()
+
+# make + and - neurons
+- np.random.rand(i,j) will make an array of i,j with random numbers between 0,1
+- np.random.rand(i,j) - 0.5 does the same thing, but now all values will be between -0.5 and 0.5
+- this means that neurons can be used to transmit negative information
+    - that is, they can flip the sign of a signal
