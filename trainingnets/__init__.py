@@ -7,3 +7,5 @@ from trainingnets.FClayer import FClayer
 from trainingnets.ActivationLayer import ActivationLayer
 from trainingnets.network import Network
 from trainingnets.ConvLayer import ConvLayer
+from trainingnets.error_functions import *
+from trainingnets.activation_functions import *
