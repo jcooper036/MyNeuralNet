@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import numpy as np
-import MyNeuralNet as mnn
+import trainingnets as mnn
 import random
 
 

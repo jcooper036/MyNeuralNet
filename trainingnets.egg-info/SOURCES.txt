@@ -1,0 +1,11 @@
+trainingnets/ActivationLayer.py
+trainingnets/ConvLayer.py
+trainingnets/FClayer.py
+trainingnets/__init__.py
+trainingnets/layer.py
+trainingnets/network.py
+trainingnets.egg-info/PKG-INFO
+trainingnets.egg-info/SOURCES.txt
+trainingnets.egg-info/dependency_links.txt
+trainingnets.egg-info/not-zip-safe
+trainingnets.egg-info/top_level.txt
