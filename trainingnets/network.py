@@ -13,7 +13,7 @@ class Network:
         """Adds a layer to the network"""
         self.layers.append(layer)
     
-    def use(self, loss, loss_prime):
+    def useLoss(self, loss, loss_prime):
         """Set the loss functions to use"""
         self.loss = loss
         self.loss_prime = loss_prime
@@ -38,7 +38,7 @@ class Network:
         
         return result
     
-    def fit(self, x_train, y_train, epochs, learning_rate):
+    def fit(self, x_train, y_train, epochs, learning_rate, quiet=False):
         """Train the network using x_train inputs and y_train answers"""
         samples = len(x_train)
 
@@ -62,4 +62,9 @@ class Network:
 
             # calculate avergae error on all samples
             err /= samples
-            print('epoch %d%d   error=%f' % (i+1, epochs, err))
+            if not quiet:
+                if not i % 100 or i == (epochs-1):
+                    print('epoch {}    error={}'.format(i+1, err))
+                    # print('epoch %d%d   error=%f' % (i+1, epochs, err))
+        if quiet:
+            print('epoch {}    error={}'.format(i+1, err))
